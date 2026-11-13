@@ -81,8 +81,11 @@ sudo pacman -S base-devel libx11 libxft libxinerama \
 <summary><b>~/.xinitrc</b></summary>
 
 ```sh
-~/.fehbg &
+#!/bin/sh
+pkill -f dwmstatus.sh
+~/.fehbg
 xcompmgr &
+~/.local/bin/dwmstatus.sh &
 exec dwm
 ```
 
